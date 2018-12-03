@@ -116,24 +116,17 @@ Once we have a Point of Sale we need to choose a <a href="https://visit.github.i
 ```shell
 curl -X POST 
 --header 'Accept: application/json' 
---header 'apiKey: APIKEY132456789EWOK' -d '{
-  "PointOfSalesId": 1234570,
-  "Currency": "SEK"
-}' 'https://galaxy.citybreak.com/v2/api/basket/create'
+--header 'apiKey: APIKEY132456789EWOK' 'https://galaxy.citybreak.com/v2/api/basket/create/1234570/SEK'
 ```
 
 ```javascript
-var r = fetch("https://galaxy.citybreak.com/v2/api/basket/create",
+var r = fetch("https://galaxy.citybreak.com/v2/api/basket/create/1234570/SEK",
 {
   method:"POST"
   headers: {
     "ApiKey:" "APIKEY132456789EWOK",
     "Accept": "application/json"
-  },
-  body: JSON.Stringify({
-	"PointOfSalesId": 1234570,
-	"Currency": "SEK"
-  })
+  }
 });
 ```
 
